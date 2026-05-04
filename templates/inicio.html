@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dark Academy</title>
+</head>
+<body>
+    <h2>Bienvenido, {{ usuario }}</h2>
+    <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+    <br><br>
+    <a href="{{ url_for('alumnos') }}">Gestión de Alumnos</a><br>
+    <a href="{{ url_for('modulos') }}">Gestión de Módulos</a><br>
+    <a href="{{ url_for('notas') }}">Gestión de Notas</a>
+</body>
+</html>
+

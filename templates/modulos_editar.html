@@ -1,0 +1,18 @@
+{% extends "modulos_base.html" %}
+{% block contenido %}
+
+<h2>Editar Módulo</h2>
+
+<form method="POST">
+    <label>Código:</label><br>
+    <input type="text" value="{{ modulo.codigo }}" disabled><br><br>
+
+    <label>Nombre:</label><br>
+    <input type="text" name="nombre" value="{{ modulo.nombre }}" required><br><br>
+
+    <button type="submit">Actualizar</button>
+</form>
+<!-- Navegación: enlace para cancelar y volver a la lista -->
+    <br>
+    <a href="{{ url_for('modulos') }}">⬅️ Cancelar y volver a la lista</a>
+{% endblock %}

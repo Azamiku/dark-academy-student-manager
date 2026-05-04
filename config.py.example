@@ -1,0 +1,6 @@
+config = {
+    'user': 'root',
+    'password': 'TU_CONTRASEÑA',
+    'database': 'Dark_Academy',
+    'host': 'localhost'
+}

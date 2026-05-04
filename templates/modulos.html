@@ -1,0 +1,32 @@
+{% extends "modulos_base.html" %}
+{% block contenido %}
+<!-- 'nuevo_modulo' es la ruta al backend-->
+<a href="{{ url_for('nuevo_modulo') }}">➕ Nuevo módulo</a>
+
+<table border="1" cellpadding="6">
+    <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+    </tr>
+
+    {% for m in modulos %}
+    <tr>
+        <td>{{ m.codigo }}</td>
+        <td>{{ m.nombre }}</td>
+        <td>
+            <!--pasamos como parámetro el codigo-->
+            <a href="{{ url_for('editar_modulo', codigo=m.codigo) }}">Editar</a> |
+            <a href="{{ url_for('eliminar_modulo', codigo=m.codigo) }}"
+               onclick="return confirm('¿Seguro que quieres eliminar?')">
+                Eliminar
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<!-- He implementado esta mejora de usabilidad: enlace para volver fácilmente al menú principal -->
+<br><br>
+<a href="{{ url_for('inicio') }}" style="text-decoration: none; padding: 8px 15px; background-color: #4CAF50; color: white; border-radius: 4px;">
+    🏠 Volver al Inicio
+</a>
+{% endblock %}

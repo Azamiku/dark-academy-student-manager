@@ -1,0 +1,35 @@
+{% extends "notas_base.html" %}
+{% block contenido %}
+
+<h2>Nueva Nota</h2>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                {% if category == 'error' %}
+                    <p style="color:red;">{{ message }}</p>
+                {% elif category == 'success' %}
+                    <p style="color:green;">{{ message }}</p>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    
+
+<form method="POST">
+    <label>Expediente:</label><br>
+    <input type="text" name="expediente" required><br><br>
+
+    <label>Codigo:</label><br>
+    <input type="text" name="codigo" required><br><br>
+
+<!-- Modificado para que el usuario no pueda poner otar cosa que no sea un númeor en la nota-->   
+    <label>Nota (0-10 o dejar vacío para NULL):</label><br>
+    <input type="number" name="nota" min="0" max="10" step="1"><br><br>
+
+    <button type="submit">Guardar</button>
+</form>
+<!-- Navegación: enlace para cancelar y volver a la lista -->
+    <br>
+    <a href="{{ url_for('notas') }}">⬅️ Cancelar y volver a la lista</a>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "notas_base.html" %}
+{% block contenido %}
+<!-- 'nuevo_nota' es la ruta al backend-->
+<a href="{{ url_for('nueva_nota') }}">➕ Nueva nota</a>
+
+<table border="1" cellpadding="6">
+    <tr>
+        <th>Expediente</th>
+        <th>Codigo</th>
+        <th>Nota</th>
+    </tr>
+
+    {% for n in notas %}
+    <tr>
+        <td>{{ n.expediente }}</td>
+        <td>{{ n.codigo }}</td>
+        <td>{{ n.nota }}</td>
+        <td>
+            <!--pasamos como parámetro el expediente y el codigo-->
+            <a href="{{ url_for('editar_nota', expediente=n.expediente, codigo=n.codigo) }}">Editar</a> |
+            <a href="{{ url_for('eliminar_nota', expediente=n.expediente, codigo=n.codigo) }}"
+               onclick="return confirm('¿Seguro que quieres eliminar?')">
+                Eliminar
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<!-- He implementado esta mejora de usabilidad: enlace para volver fácilmente al menú principal -->
+ <br><br>
+<a href="{{ url_for('inicio') }}" style="text-decoration: none; padding: 8px 15px; background-color: #4CAF50; color: white; border-radius: 4px;">
+    🏠 Volver al Inicio
+</a>
+
+{% endblock %}

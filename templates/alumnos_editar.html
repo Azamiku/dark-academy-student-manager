@@ -1,0 +1,22 @@
+{% extends "alumnos_base.html" %}
+{% block contenido %}
+
+<h2>Editar Alumno</h2>
+
+<form method="POST">
+    <label>Expediente:</label><br>
+    <input type="text" value="{{ alumno.expediente }}" disabled><br><br>
+
+    <label>Nombre:</label><br>
+    <input type="text" name="nombre" value="{{ alumno.nombre }}" required><br><br>
+
+    <label>Apellidos:</label><br>
+    <input type="text" name="apellidos" value="{{ alumno.apellidos }}" required><br><br>
+
+    <button type="submit">Actualizar</button>
+</form>
+ <!-- Navegación: enlace para cancelar y volver a la lista -->
+    <br>
+    <a href="{{ url_for('alumnos') }}">⬅️ Cancelar y volver a la lista</a>
+    
+{% endblock %}

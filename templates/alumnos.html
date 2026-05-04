@@ -1,0 +1,38 @@
+{% extends "alumnos_base.html" %}
+{% block contenido %}
+<!-- 'nuevo_alumno' es la ruta al backend-->
+<a href="{{ url_for('nuevo_alumno') }}">➕ Nuevo alumno</a>
+
+<table border="1" cellpadding="6">
+    <tr>
+        <th>Expediente</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Acciones</th>
+    </tr>
+
+    {% for a in alumnos %}
+    <tr>
+        <td>{{ a.expediente }}</td>
+        <td>{{ a.nombre }}</td>
+        <td>{{ a.apellidos }}</td>
+        <td>
+            <!--pasamos como parámetro el expediente-->
+            <a href="{{ url_for('editar_alumno', expediente=a.expediente) }}">Editar</a> |
+            <a href="{{ url_for('eliminar_alumno', expediente=a.expediente) }}"
+               onclick="return confirm('¿Seguro que quieres eliminar?')">
+                Eliminar
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!-- He implementado esta mejora de usabilidad: enlace para volver fácilmente al menú principal -->
+<br><br>
+<a href="{{ url_for('inicio') }}" style="text-decoration: none; padding: 8px 15px; background-color: #4CAF50; color: white; border-radius: 4px;">
+    🏠 Volver al Inicio
+</a>
+
+
+{% endblock %}

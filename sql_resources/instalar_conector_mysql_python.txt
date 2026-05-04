@@ -1,0 +1,4 @@
+https://dev.mysql.com/doc/connector-python/en/
+
+
+pip install mysql-connector-python
