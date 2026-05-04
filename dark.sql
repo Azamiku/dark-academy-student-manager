@@ -237,4 +237,3 @@ select expediente, AVG(nota), count(nota)
 -- select * from alumnos;
 -- select * from alumnos_segundo;
 -- select @porcentaje;
-
