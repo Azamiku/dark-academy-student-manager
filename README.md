@@ -11,6 +11,14 @@ Sistema de gestión académico para Dark Academy, construido con Python, Flask y
 - **Auditoría de notas**: Triggers que registran todos los cambios en las notas
 - **Seguridad de sesiones**: Sesiones con tiempo de expiración y cookies seguras
 
+## 📸 Capturas
+
+![Gestión de alumnos](screenshots/alumnos.png)  
+*Gestión de alumnos*
+
+![Editar nota](screenshots/editar-nota.png)  
+*Editar nota*
+
 ## 🛠️ Tecnologías
 
 - **Backend**: Python 3 + Flask
