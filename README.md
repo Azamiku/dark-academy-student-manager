@@ -13,10 +13,10 @@ Sistema de gestión académico para Dark Academy, construido con Python, Flask y
 
 ## 📸 Capturas
 
-![Gestión de alumnos](screenshots/alumnos.png)  
+![Gestión de alumnos](screenshots/alumnos.PNG)  
 *Gestión de alumnos*
 
-![Editar nota](screenshots/editar-nota.png)  
+![Editar nota](screenshots/editar-nota.PNG)  
 *Editar nota*
 
 ## 🛠️ Tecnologías
