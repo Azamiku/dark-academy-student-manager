@@ -108,10 +108,10 @@ dark-academy-student-manager/
 └── .gitignore                 # Archivos ignorados por Git
 ```
 
-## 👨‍💻 Autor
+## 👨‍💻 Contexto académico
 
-Proyecto académico de la asignatura de Bases de Datos.
+Proyecto del módulo de **Acesso a Datos** — DAM (Desarrollo de Aplicaciones Multiplataforma).
 
 ## 📝 Nota
 
-Este proyecto tiene una temática fantástica ("Dark Academy", "Artes Oscuras") como parte de un trabajo de DAM Grado Superior. Es una demostración técnica de CRUD, seguridad y gestión de bases de datos.
+Este proyecto tiene una temática fantástica ("Dark Academy", "Artes Oscuras") como parte de un proyecto académico. Es una demostración técnica de CRUD, seguridad y gestión de bases de datos.
